@@ -668,13 +668,13 @@ object-assign
             var re = 2 * (G + 1) - 1,
               ie = N[re],
               Q = re + 1,
-              J = N[Q];
+              ee = N[Q];
             if (ie !== void 0 && 0 > S(ie, I))
-              J !== void 0 && 0 > S(J, ie)
-                ? ((N[G] = J), (N[Q] = I), (G = Q))
+              ee !== void 0 && 0 > S(ee, ie)
+                ? ((N[G] = ee), (N[Q] = I), (G = Q))
                 : ((N[G] = ie), (N[re] = I), (G = re));
-            else if (J !== void 0 && 0 > S(J, I))
-              (N[G] = J), (N[Q] = I), (G = Q);
+            else if (ee !== void 0 && 0 > S(ee, I))
+              (N[G] = ee), (N[Q] = I), (G = Q);
             else break e;
           }
         }
@@ -27882,7 +27882,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
       });
     }
   }
-  function ee(...e) {
+  function J(...e) {
     return e.filter(Boolean).join(" ");
   }
   function vt(e, t) {
@@ -28316,7 +28316,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     hasFocusableParent: n,
   }) {
     const r = Z7(),
-      i = ee(qf.Spinner, e && qf[vt("size", e)]),
+      i = J(qf.Spinner, e && qf[vt("size", e)]),
       l =
         e === "large"
           ? D.createElement(
@@ -28671,7 +28671,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
           "focusable",
           "onScrolledToBottom",
         ]),
-        y = ee(
+        y = J(
           l,
           fr.Scrollable,
           c && fr.vertical,
@@ -28871,7 +28871,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
           width: l == null || isNaN(l) ? void 0 : l,
           zIndex: f || i || void 0,
         },
-        v = ee(
+        v = J(
           rs.PositionedOverlay,
           c && rs.fixed,
           o && rs.preventInteraction,
@@ -28914,7 +28914,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     return D.createElement("div", { className: St.Section }, e);
   }
   function Q5({ fixed: e, sectioned: t, children: n, onScrolledToBottom: r }) {
-    const i = ee(St.Pane, e && St["Pane-fixed"]),
+    const i = J(St.Pane, e && St["Pane-fixed"]),
       l = t ? w0(n, Yy, {}) : n;
     return e
       ? D.createElement("div", { className: i }, l)
@@ -28961,7 +28961,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
               colorScheme: y,
               autofocusTarget: _,
             } = this.props,
-            E = ee(
+            E = J(
               St.Popover,
               l === "above" && St.positionedAbove,
               d && St.fullWidth,
@@ -28969,7 +28969,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
               v && St["PopoverOverlay-hideOnPrint"]
             ),
             u = r ? void 0 : { height: i },
-            h = ee(
+            h = J(
               St.Content,
               f && St["Content-fullHeight"],
               m && St["Content-fluidContent"]
@@ -29081,7 +29081,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
         } = this.props,
         { transitionStatus: d } = this.state;
       if (d === r1.Exited && !t) return null;
-      const f = ee(
+      const f = J(
         St.PopoverOverlay,
         d === r1.Entering && St["PopoverOverlay-entering"],
         d === r1.Entered && St["PopoverOverlay-open"],
@@ -29277,7 +29277,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
       ? (i = "placeholder")
       : (i = "external"),
       n && t && TL.includes(t);
-    const l = ee(
+    const l = J(
         vn.Icon,
         t && vn[vt("color", t)],
         t && vn.applyColor,
@@ -29323,7 +29323,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
       (e.Code = "code");
   })(U3 || (U3 = {}));
   function A1({ variation: e, children: t }) {
-    const n = ee(e && Xf[vt("variation", e)], e === U3.Code && Xf.code),
+    const n = J(e && Xf[vt("variation", e)], e === U3.Code && Xf.code),
       r = PL(e);
     return D.createElement(r, { className: n }, t);
   }
@@ -29374,7 +29374,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
   }) {
     const l = at(),
       a = s.exports.useContext(Qy),
-      c = ee(
+      c = J(
         hr.Badge,
         t && hr[vt("status", t)],
         n && hr[vt("progress", n)],
@@ -29469,12 +29469,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     active: E,
     role: u,
   }) {
-    const h = ee(
-      Et.Item,
-      m && Et.disabled,
-      y && Et.destructive,
-      E && Et.active
-    );
+    const h = J(Et.Item, m && Et.disabled, y && Et.destructive, E && Et.active);
     let p = null;
     d
       ? (p = D.createElement("span", { className: Et.Prefix }, d))
@@ -29574,7 +29569,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
         );
       }),
       c = e.title ? void 0 : Et["Section-withoutTitle"],
-      o = ee(Et.Title, r && Et.firstSectionWithTitle),
+      o = J(Et.Title, r && Et.firstSectionWithTitle),
       d = e.title ? D.createElement("p", { className: o }, e.title) : null;
     let f;
     switch (n) {
@@ -29615,7 +29610,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     let i = [];
     const l = s.exports.useRef(null);
     e ? (i = [{ items: e }, ...t]) : t && (i = t);
-    const a = ee(Et.ActionList),
+    const a = J(Et.ActionList),
       c = i.length > 1,
       o = c ? "ul" : "div",
       d = c && n === "menuitem" ? "menu" : void 0,
@@ -29805,7 +29800,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
   }) {
     const $ = at(),
       q = r || c,
-      Y = ee(
+      Y = J(
         Fe.Button,
         C && Fe.primary,
         S && Fe.outline,
@@ -29826,19 +29821,19 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
         ? M("span", {
             className: Fe.Icon,
             children: M("div", {
-              className: ee(Fe.DisclosureIcon, c && Fe.hidden),
+              className: J(Fe.DisclosureIcon, c && Fe.hidden),
               children: M(lt, { source: c ? "placeholder" : NL(F) }),
             }),
           })
         : null,
       k = kL(w) ? M(lt, { source: c ? "placeholder" : w }) : w,
       I = k
-        ? M("span", { className: ee(Fe.Icon, c && Fe.hidden), children: k })
+        ? M("span", { className: J(Fe.Icon, c && Fe.hidden), children: k })
         : null,
       G = t
         ? M(
             "span",
-            { className: ee(Fe.Text, B && Fe.removeUnderline), children: t },
+            { className: J(Fe.Text, B && Fe.removeUnderline), children: t },
             r ? "text-disabled" : "text"
           )
         : null,
@@ -29857,9 +29852,9 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
       Q = s.exports.useCallback(() => {
         ie((pe) => !pe);
       }, []);
-    let J;
+    let ee;
     if (V) {
-      const pe = ee(
+      const pe = J(
           Fe.Button,
           C && Fe.primary,
           S && Fe.outline,
@@ -29886,7 +29881,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
             children: M(lt, { source: G8 }),
           }),
         });
-      J = M($1, {
+      ee = M($1, {
         active: re,
         onClose: Q,
         activator: te,
@@ -29936,10 +29931,10 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
         }
       )
     );
-    return J
+    return ee
       ? ne("div", {
           className: Fe.ConnectedDisclosureWrapper,
-          children: [fe, J],
+          children: [fe, ee],
         })
       : fe;
   }
@@ -29975,7 +29970,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
   };
   function RL({ button: e }) {
     const { value: t, setTrue: n, setFalse: r } = A2(!1),
-      i = ee(
+      i = J(
         Pn.Item,
         t && Pn["Item-focused"],
         e.props.plain && Pn["Item-plain"]
@@ -29989,7 +29984,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     fullWidth: r,
     connectedTop: i,
   }) {
-    const l = ee(
+    const l = J(
         Pn.ButtonGroup,
         t && Pn[t],
         n && Pn.segmented,
@@ -30032,7 +30027,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     "Item-fill": "Polaris-Stack__Item--fill",
   };
   function Xy({ children: e, fill: t }) {
-    const n = ee(N2.Item, t && N2["Item-fill"]);
+    const n = J(N2.Item, t && N2["Item-fill"]);
     return D.createElement("div", { className: n }, e);
   }
   const U1 = s.exports.memo(function ({
@@ -30043,7 +30038,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     alignment: l,
     wrap: a,
   }) {
-    const c = ee(
+    const c = J(
         N2.Stack,
         n && N2.vertical,
         r && N2[vt("spacing", r)],
@@ -30085,7 +30080,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     actions: l,
     hideOnPrint: a,
   }) {
-    const c = ee(
+    const c = J(
         h1.Section,
         r && h1["Section-flush"],
         n && h1["Section-subdued"],
@@ -30128,7 +30123,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
   }) {
     const m = at(),
       { value: v, toggle: y } = A2(!1),
-      _ = ee(h1.Card, i && h1.subdued, n && h1.hideOnPrint),
+      _ = J(h1.Card, i && h1.subdued, n && h1.hideOnPrint),
       E = r || a ? D.createElement(Jy, { actions: a, title: r }) : null,
       u = l ? D.createElement(e_, null, t) : t,
       h = c ? Gn(c, { primary: !0 }) : null;
@@ -30158,7 +30153,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
       h || p
         ? D.createElement(
             "div",
-            { className: ee(h1.Footer, f === "left" && h1.LeftJustified) },
+            { className: J(h1.Footer, f === "left" && h1.LeftJustified) },
             f === "right"
               ? D.createElement(T1, null, p, h)
               : D.createElement(T1, null, h, p)
@@ -30240,7 +30235,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
           r((o = c.current) === null || o === void 0 ? void 0 : o.offsetWidth);
       }, [r]),
       M("span", {
-        className: ee(th.SecondaryAction, t && th.destructive),
+        className: J(th.SecondaryAction, t && th.destructive),
         ref: c,
         children: M(
           je,
@@ -30472,7 +30467,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     rollupActionsLabel: r,
   }) {
     if (e.length === 0 && t.length === 0) return null;
-    const i = ee(eh.ActionMenu, n && eh.rollup),
+    const i = J(eh.ActionMenu, n && eh.rollup),
       l = t.map((a) => YL(a));
     return D.createElement(
       "div",
@@ -30541,7 +30536,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     onMouseOut: o,
     onMouseOver: d,
   }) {
-    const f = ee(P2.Choice, l && P2.labelHidden, n && P2.disabled),
+    const f = J(P2.Choice, l && P2.labelHidden, n && P2.disabled),
       m = D.createElement(
         "label",
         { className: f, htmlFor: e, onClick: c, onMouseOver: d, onMouseOut: o },
@@ -30615,15 +30610,15 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
       a && z.push(n_(h)),
       n && z.push(n);
     const T = z.length ? z.join(" ") : void 0,
-      B = ee(T2.Checkbox, m && T2.error),
-      P = ee(T2.Backdrop, p && T2.hover),
+      B = J(T2.Checkbox, m && T2.error),
+      P = J(T2.Backdrop, p && T2.hover),
       U = l === "indeterminate",
       R = !U && Boolean(l),
       V = U
         ? { indeterminate: "true", "aria-checked": "mixed" }
         : { "aria-checked": R },
       $ = U ? qP : YP,
-      q = ee(T2.Input, U && T2["Input-indeterminate"], x && T2.keyFocused);
+      q = J(T2.Input, U && T2["Input-indeterminate"], x && T2.keyFocused);
     return M(KL, {
       id: h,
       label: r,
@@ -30719,7 +30714,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     return `${e}Label`;
   }
   function JL({ children: e, id: t, hidden: n, requiredIndicator: r }) {
-    const i = ee(Fa.Label, n && Fa.hidden);
+    const i = J(Fa.Label, n && Fa.hidden);
     return D.createElement(
       "div",
       { className: i },
@@ -30728,7 +30723,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
         {
           id: i_(t),
           htmlFor: t,
-          className: ee(Fa.Text, r && Fa.RequiredIndicator),
+          className: J(Fa.Text, r && Fa.RequiredIndicator),
         },
         e
       )
@@ -30756,7 +30751,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
         "labelHidden",
         "requiredIndicator",
       ]);
-    const m = ee(a && ui.hidden),
+    const m = J(a && ui.hidden),
       v = r
         ? D.createElement("div", { className: ui.Action }, Gn(r, { plain: !0 }))
         : null,
@@ -30796,7 +30791,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
   };
   function os({ children: e, position: t }) {
     const { value: n, setTrue: r, setFalse: i } = A2(!1),
-      l = ee(
+      l = J(
         bi.Item,
         n && bi["Item-focused"],
         t === "primary" ? bi["Item-primary"] : bi["Item-connection"]
@@ -30971,7 +30966,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     monospaced: ie,
     selectTextOnFocus: Q,
   }) {
-    const J = at(),
+    const ee = at(),
       [le, K] = s.exports.useState(null),
       [se, fe] = s.exports.useState(Boolean(v)),
       pe = Z7(),
@@ -30988,7 +30983,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
       me = x != null ? x : 1,
       ye = C != null ? C : 1 / 0,
       xe = F != null ? F : -1 / 0,
-      Ce = ee(
+      Ce = J(
         Ie.TextField,
         Boolean(oe) && Ie.hasValue,
         o && Ie.disabled,
@@ -31018,12 +31013,12 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     if (Y) {
       const ke = oe.length,
         Ot = S
-          ? J.translate("Polaris.TextField.characterCountWithMaxLength", {
+          ? ee.translate("Polaris.TextField.characterCountWithMaxLength", {
               count: ke,
               limit: S,
             })
-          : J.translate("Polaris.TextField.characterCount", { count: ke }),
-        G1 = ee(Ie.CharacterCount, y && Ie.AlignFieldBottom),
+          : ee.translate("Polaris.TextField.characterCount", { count: ke }),
+        G1 = J(Ie.CharacterCount, y && Ie.AlignFieldBottom),
         _1 = S ? `${ke}/${S}` : ke;
       Re = M("div", {
         id: `${O}CharacterCounter`,
@@ -31035,7 +31030,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
       });
     }
     const Te = oe !== "",
-      _e = ee(Ie.ClearButton, !Te && Ie.Hidden),
+      _e = J(Ie.ClearButton, !Te && Ie.Hidden),
       Me = d
         ? ne("button", {
             type: "button",
@@ -31043,7 +31038,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
             onClick: Pe,
             disabled: o,
             children: [
-              M(x0, { children: J.translate("Polaris.Common.clear") }),
+              M(x0, { children: ee.translate("Polaris.Common.clear") }),
               M(lt, { source: VP, color: "base" }),
             ],
           })
@@ -31099,7 +31094,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
       Y && u2.push(`${O}CharacterCounter`);
     const F2 = [];
     e && F2.push(`${O}Prefix`), t && F2.push(`${O}Suffix`), F2.unshift(i_(O));
-    const I0 = ee(
+    const I0 = J(
         Ie.Input,
         N && Ie[vt("Input-align", N)],
         t && Ie["Input-suffixed"],
@@ -31156,7 +31151,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
           oB(y)
         )
       ),
-      be = ee(
+      be = J(
         Ie.Backdrop,
         u && Ie["Backdrop-connectedLeft"],
         E && Ie["Backdrop-connectedRight"]
@@ -31249,7 +31244,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
         belowNavigation: r,
         transparent: i,
       } = e,
-      l = ee(ss.Backdrop, r && ss.belowNavigation, i && ss.transparent);
+      l = J(ss.Backdrop, r && ss.belowNavigation, i && ss.transparent);
     return D.createElement(
       D.Fragment,
       null,
@@ -31313,7 +31308,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
       } = mB(d),
       { defaultIcon: p, iconColor: g, ariaRoleType: b } = pB(a),
       x = t || p,
-      w = ee(
+      w = J(
         ht.Banner,
         a && ht[vt("status", a)],
         c && ht.hasDismiss,
@@ -31334,7 +31329,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
           ? ne("button", {
               disabled: !0,
               "aria-busy": !0,
-              className: ee(ht.Button, ht.loading),
+              className: J(ht.Button, ht.loading),
               children: [
                 M("span", {
                   className: ht.Spinner,
@@ -32201,7 +32196,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     pulse: "Polaris-Indicator--pulse",
   };
   function PB({ pulse: e = !0 }) {
-    const t = ee(sh.Indicator, e && sh.pulseIndicator);
+    const t = J(sh.Indicator, e && sh.pulseIndicator);
     return D.createElement("span", { className: t });
   }
   function r3({
@@ -32295,8 +32290,8 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
         d.current && f && f(m, d.current);
       }, [m, f]);
     const v = l
-      ? ee(L2.CheckableButton, L2["CheckableButton-plain"])
-      : ee(
+      ? J(L2.CheckableButton, L2["CheckableButton-plain"])
+      : J(
           L2.CheckableButton,
           i && L2["CheckableButton-selectMode"],
           r && L2["CheckableButton-selected"],
@@ -32323,11 +32318,11 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
   }
   const BB = 2,
     OB = {
-      appear: ee(tt.Slide, tt["Slide-appear"]),
-      appearActive: ee(tt.Slide, tt["Slide-appearing"]),
-      enter: ee(tt.Slide, tt["Slide-enter"]),
-      enterActive: ee(tt.Slide, tt["Slide-entering"]),
-      exit: ee(tt.Slide, tt["Slide-exit"]),
+      appear: J(tt.Slide, tt["Slide-appear"]),
+      appearActive: J(tt.Slide, tt["Slide-appearing"]),
+      enter: J(tt.Slide, tt["Slide-enter"]),
+      enterActive: J(tt.Slide, tt["Slide-entering"]),
+      exit: J(tt.Slide, tt["Slide-exit"]),
     };
   class kB extends s.exports.PureComponent {
     constructor(...t) {
@@ -32603,7 +32598,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
                 in: t,
                 nodeRef: this.smallScreenGroupNode,
                 children: (U) => {
-                  const R = ee(
+                  const R = J(
                     tt.Group,
                     tt["Group-smallScreen"],
                     tt[`Group-${U}`]
@@ -32661,7 +32656,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
                 in: t,
                 nodeRef: this.largeScreenGroupNode,
                 children: (U) => {
-                  const R = ee(
+                  const R = J(
                     tt.Group,
                     tt["Group-largeScreen"],
                     !E && tt[`Group-${U}`],
@@ -32722,7 +32717,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     spacingLoose: "Polaris-TextContainer--spacingLoose",
   };
   function q3({ spacing: e, children: t }) {
-    const n = ee(uh.TextContainer, e && uh[vt("spacing", e)]);
+    const n = J(uh.TextContainer, e && uh[vt("spacing", e)]);
     return D.createElement("div", { className: n }, t);
   }
   var ds = {
@@ -32744,7 +32739,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
       v = d === "idle" && n && c,
       y = d === "idle" && !n && !c,
       _ = t || !y ? i : null,
-      E = ee(ds.Collapsible, y && ds.isFullyClosed, t && ds.expandOnPrint),
+      E = J(ds.Collapsible, y && ds.isFullyClosed, t && ds.expandOnPrint),
       u = He(
         Ee(
           {},
@@ -33082,7 +33077,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
         h = r
           ? M(GB, { alpha: f, color: n, onChange: this.handleAlphaChange })
           : null,
-        p = ee(_2.ColorPicker, i && _2.fullWidth);
+        p = J(_2.ColorPicker, i && _2.fullWidth);
       return ne("div", {
         className: p,
         id: t,
@@ -34034,7 +34029,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
       sizeExtraLarge: "Polaris-DisplayText--sizeExtraLarge",
     };
   function sl({ element: e = "p", children: t, size: n = "medium" }) {
-    const r = ee(kh.DisplayText, n && kh[vt("size", n)]);
+    const r = J(kh.DisplayText, n && kh[vt("size", n)]);
     return D.createElement(e, { className: r }, t);
   }
   const iH =
@@ -34078,7 +34073,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     footerContent: o,
   }) {
     const d = s.exports.useContext($8),
-      f = ee(
+      f = J(
         n1.EmptyState,
         l && n1.fullWidth,
         i && n1.imageContained,
@@ -34196,7 +34191,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     };
   function ms({ children: e }) {
     const { value: t, setTrue: n, setFalse: r } = A2(!1),
-      i = ee(f1.Item, t && f1["Item-focused"]);
+      i = J(f1.Item, t && f1["Item-focused"]);
     return D.createElement("div", { onBlur: r, onFocus: n, className: i }, e);
   }
   const sH = 150;
@@ -34228,9 +34223,9 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
           queryFieldHidden: a,
         } = this.props,
         c = n != null ? this.getActionsToRender(n) : [],
-        o = ee(f1.ConnectedFilterControl, n && f1.right),
+        o = J(f1.ConnectedFilterControl, n && f1.right),
         d = l || (n && n.length !== c.length),
-        f = ee(
+        f = J(
           f1.RightContainer,
           !d && f1.RightContainerWithoutMoreFilters,
           a && f1.queryFieldHidden
@@ -34239,7 +34234,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
           c.length > 0
             ? M("div", { className: f, children: this.popoverFrom(c) })
             : null,
-        v = ee(
+        v = J(
           f1.MoreFiltersButtonContainer,
           c.length === 0 && f1.onlyButtonVisible
         ),
@@ -34390,7 +34385,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
   }) {
     const a = at(),
       c = r && l,
-      o = ee(
+      o = J(
         b1.Tag,
         t && b1.disabled,
         n && b1.clickable,
@@ -34413,7 +34408,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
             {
               type: "button",
               "aria-label": f,
-              className: ee(b1.Button, c && b1.segmented),
+              className: J(b1.Button, c && b1.segmented),
               onClick: r,
               onMouseUp: C2,
               disabled: t,
@@ -34425,7 +34420,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
         l && !t
           ? D.createElement(
               "a",
-              { className: ee(b1.Link, c && b1.segmented), href: l },
+              { className: J(b1.Link, c && b1.segmented), href: l },
               D.createElement("span", { title: d, className: b1.LinkText }, e)
             )
           : D.createElement("span", { title: d, className: b1.TagText }, e);
@@ -34531,16 +34526,16 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     });
   }
   const pH = {
-      enter: ee(zt.Bottom, zt.enterBottom),
-      enterActive: ee(zt.Bottom, zt.enterBottomActive),
-      exit: ee(zt.Bottom, zt.exitBottom),
-      exitActive: ee(zt.Bottom, zt.exitBottomActive),
+      enter: J(zt.Bottom, zt.enterBottom),
+      enterActive: J(zt.Bottom, zt.enterBottomActive),
+      exit: J(zt.Bottom, zt.exitBottom),
+      exitActive: J(zt.Bottom, zt.exitBottomActive),
     },
     mH = {
-      enter: ee(zt.Right, zt.enterRight),
-      enterActive: ee(zt.Right, zt.enterRightActive),
-      exit: ee(zt.Right, zt.exitRight),
-      exitActive: ee(zt.Right, zt.exitRightActive),
+      enter: J(zt.Right, zt.enterRight),
+      enterActive: J(zt.Right, zt.enterRightActive),
+      exit: J(zt.Right, zt.exitRight),
+      exitActive: J(zt.Right, zt.exitRightActive),
     };
   function Nh({
     children: e,
@@ -34679,7 +34674,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
         w = t.map((j, re) => {
           const ie = this.state[`${j.key}${Z1.Filter}`] === !0,
             Q = ie ? DP : NP,
-            J = ee(
+            ee = J(
               ot.FilterTriggerContainer,
               ie && ot.open,
               re === 0 && ot.first,
@@ -34697,11 +34692,11 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
                 })
               : null,
             se = `${j.key}Collapsible`,
-            fe = ee(ot.FilterTrigger);
+            fe = J(ot.FilterTrigger);
           return ne(
             "div",
             {
-              className: J,
+              className: ee,
               children: [
                 ne("button", {
                   onClick: () => this.toggleFilter(j.key),
@@ -34806,7 +34801,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
                 autoComplete: "off",
               }),
         }),
-        B = ee(ot.FiltersContainerHeader),
+        B = J(ot.FiltersContainerHeader),
         P = ne("div", {
           className: B,
           children: [
@@ -34836,7 +34831,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
             }),
           ],
         }),
-        R = ee(ot.FiltersContainerFooter),
+        R = J(ot.FiltersContainerFooter),
         V = ne("div", {
           className: R,
           children: [
@@ -34896,8 +34891,8 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
                 ),
               }),
             }),
-        N = ee(ot.FiltersMobileContainerContent),
-        k = ee(ot.FiltersDesktopContainerContent),
+        N = J(ot.FiltersMobileContainerContent),
+        k = J(ot.FiltersDesktopContainerContent),
         I = h
           ? ne(Nh, {
               accessibilityLabel: S,
@@ -35059,7 +35054,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     return D.createElement("div", { className: Sn.Item }, e.children);
   }
   function z_({ children: e, condensed: t, title: n, helpText: r }) {
-    const i = ee(t ? Sn.condensed : Sn.grouped),
+    const i = J(t ? Sn.condensed : Sn.grouped),
       l = L1("FormLayoutGroup");
     let a = null,
       c,
@@ -35188,7 +35183,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
       s.exports.useEffect(() => {
         a.current = !0;
       }, []);
-    const o = ee(t, Vh[vt("start", n)], e && Vh[vt("end", n)]),
+    const o = J(t, Vh[vt("start", n)], e && Vh[vt("end", n)]),
       d = i === x1.Exited && !e ? null : r;
     return M("div", { className: o, ref: c, onTransitionEnd: f, children: d });
     function f() {
@@ -35272,7 +35267,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
         "limitHeight",
       ]);
     const v = s.exports.useRef(null),
-      y = ee(
+      y = J(
         At.Modal,
         c && At.sizeSmall,
         a && At.sizeLarge,
@@ -35325,12 +35320,12 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     );
   }
   const SH = {
-    appear: ee(At.animateFadeUp, At.entering),
-    appearActive: ee(At.animateFadeUp, At.entered),
-    enter: ee(At.animateFadeUp, At.entering),
-    enterActive: ee(At.animateFadeUp, At.entered),
-    exit: ee(At.animateFadeUp, At.exiting),
-    exitActive: ee(At.animateFadeUp, At.exited),
+    appear: J(At.animateFadeUp, At.entering),
+    appearActive: J(At.animateFadeUp, At.entered),
+    enter: J(At.animateFadeUp, At.entering),
+    enterActive: J(At.animateFadeUp, At.entered),
+    exit: J(At.animateFadeUp, At.exiting),
+    exitActive: J(At.animateFadeUp, At.exited),
   };
   function AH(n) {
     var r = n,
@@ -35377,7 +35372,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     flush: "Polaris-Modal-Section--flush",
   };
   function L_({ children: e, flush: t = !1, subdued: n = !1 }) {
-    const r = ee(gs.Section, t && gs.flush, n && gs.subdued);
+    const r = J(gs.Section, t && gs.flush, n && gs.subdued);
     return D.createElement("section", { className: r }, e);
   }
   var $h = {
@@ -35609,7 +35604,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
               children: b,
             }),
       w = l ? M("div", { className: gn.ContextControl, children: l }) : null,
-      C = ee(gn.Contents, i && gn.fullWidth);
+      C = J(gn.Contents, i && gn.fullWidth);
     return ne(Dt, {
       children: [
         M(W8, {
@@ -35699,7 +35694,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
             }),
           })
         : null,
-      c = ee(Ta.Toast, r && Ta.error);
+      c = J(Ta.Toast, r && Ta.error);
     return M(W8, {
       colorScheme: "dark",
       children: ne("div", {
@@ -35757,9 +35752,9 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
       });
     }),
     IH = {
-      enter: ee(Cn.ToastWrapper, Cn["ToastWrapper-enter"]),
-      enterDone: ee(Cn.ToastWrapper, Cn["ToastWrapper-enter-done"]),
-      exit: ee(Cn.ToastWrapper, Cn["ToastWrapper-exit"]),
+      enter: J(Cn.ToastWrapper, Cn["ToastWrapper-enter"]),
+      enterDone: J(Cn.ToastWrapper, Cn["ToastWrapper-enter-done"]),
+      exit: J(Cn.ToastWrapper, Cn["ToastWrapper-exit"]),
     },
     Gh = "AppFrameMain",
     DH = "AppFrameNav",
@@ -35883,7 +35878,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
           i18n: v,
           mediaQuery: { isNavigationCollapsed: y },
         } = this.props,
-        _ = ee(_t.Navigation, f && _t["Navigation-visible"]),
+        _ = J(_t.Navigation, f && _t["Navigation-visible"]),
         E = y && !f,
         u = y && f,
         h = u ? 0 : -1,
@@ -35970,7 +35965,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
               children: d,
             })
           : null,
-        S = ee(_t.Skip, t && _t.focused),
+        S = J(_t.Skip, t && _t.focused),
         A = m != null && m.current ? m.current.id : Gh,
         F = M("div", {
           className: S,
@@ -35983,7 +35978,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
           }),
         }),
         z = c ? { "data-has-navigation": !0 } : {},
-        T = ee(_t.Frame, c && _t.hasNav, o && _t.hasTopBar),
+        T = J(_t.Frame, c && _t.hasNav, o && _t.hasTopBar),
         B =
           f && y
             ? M(J7, {
@@ -36029,11 +36024,11 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     }
   }
   const UH = {
-    enter: ee(_t["Navigation-enter"]),
-    enterActive: ee(_t["Navigation-enterActive"]),
-    enterDone: ee(_t["Navigation-enterActive"]),
-    exit: ee(_t["Navigation-exit"]),
-    exitActive: ee(_t["Navigation-exitActive"]),
+    enter: J(_t["Navigation-enter"]),
+    enterActive: J(_t["Navigation-enterActive"]),
+    enterDone: J(_t["Navigation-enterActive"]),
+    exit: J(_t["Navigation-exit"]),
+    exitActive: J(_t["Navigation-exitActive"]),
   };
   function WH(e) {
     const t = at(),
@@ -36157,7 +36152,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     oneHalf: r,
     oneThird: i,
   }) {
-    const l = ee(
+    const l = J(
       I1.Section,
       t && I1["Section-secondary"],
       n && I1["Section-fullWidth"],
@@ -36249,7 +36244,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
       : null;
     function d(f) {
       const { measuring: m, desiredHeight: v, positioning: y } = f,
-        _ = ee(
+        _ = J(
           Pa.TooltipOverlay,
           m && Pa.measuring,
           y === "above" && Pa.positionedAbove
@@ -36466,7 +36461,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     TitleMetadata: "Polaris-Header-Title__TitleMetadata",
   };
   function eV({ title: e, subtitle: t, titleMetadata: n, compactTitle: r }) {
-    const i = ee(vr.Title, t && vr.TitleWithSubtitle),
+    const i = J(vr.Title, t && vr.TitleWithSubtitle),
       l = e ? D.createElement("h1", { className: i }, e) : null,
       a = n ? D.createElement("div", { className: vr.TitleMetadata }, n) : null,
       c = n
@@ -36480,7 +36475,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
       o = t
         ? D.createElement(
             "div",
-            { className: ee(vr.SubTitle, r && vr.SubtitleCompact) },
+            { className: J(vr.SubTitle, r && vr.SubtitleCompact) },
             D.createElement("p", null, t)
           )
         : null;
@@ -36559,7 +36554,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
             children: M(A1, { variation: "subdued", children: r }),
           })
         : null,
-      C = ee(
+      C = J(
         st.Header,
         _ && st.isSingleRow,
         i && st.titleHidden,
@@ -36698,14 +36693,14 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     var a = l,
       { children: e, fullWidth: t, narrowWidth: n, divider: r } = a,
       i = et(a, ["children", "fullWidth", "narrowWidth", "divider"]);
-    const c = ee(fi.Page, t && fi.fullWidth, n && fi.narrowWidth),
+    const c = J(fi.Page, t && fi.fullWidth, n && fi.narrowWidth),
       o =
         (i.title != null && i.title !== "") ||
         i.primaryAction != null ||
         (i.secondaryActions != null && i.secondaryActions.length > 0) ||
         (i.actionGroups != null && i.actionGroups.length > 0) ||
         (i.breadcrumbs != null && i.breadcrumbs.length > 0),
-      d = ee(!o && fi.Content, r && o && fi.divider),
+      d = J(!o && fi.Content, r && o && fi.divider),
       f = o ? D.createElement(iV, i) : null;
     return D.createElement(
       "div",
@@ -36908,10 +36903,10 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
       }
       (i || m) &&
         (w = ne("div", {
-          className: ee(it.Owned, !S && it.OwnedNoMedia),
+          className: J(it.Owned, !S && it.OwnedNoMedia),
           children: [C, S],
         }));
-      const A = ee(
+      const A = J(
           it.ResourceItem,
           g && it.focused,
           m && it.selectable,
@@ -36920,7 +36915,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
           o && it.persistActions,
           b && it.focusedInner
         ),
-        F = ee(it.ListItem, g && !b && it.focused);
+        F = J(it.ListItem, g && !b && it.focused);
       let z = null,
         T = null;
       if (l && !y)
@@ -36960,7 +36955,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
             }),
           });
       const B = t ? M("div", { className: it.Content, children: t }) : null,
-        P = ee(it.Container, u && it[vt("alignment", u)]),
+        P = J(it.Container, u && it[vt("alignment", u)]),
         U = ne("div", {
           className: P,
           id: this.props.id,
@@ -37098,7 +37093,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
   }) {
     const u = L1("Select", o),
       h = i ? !0 : r,
-      p = ee(q1.Select, m && q1.error, l && q1.disabled),
+      p = J(q1.Select, m && q1.error, l && q1.disabled),
       g = v ? (T) => v(T.currentTarget.value, u) : void 0,
       b = [];
     a && b.push(X7(u)), m && b.push(`${u}Error`);
@@ -37317,7 +37312,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
               resourceNamePlural: j.plural,
             });
       },
-      J = () => {
+      ee = () => {
         if (!(!I || !m) && o === f2)
           return C.translate(
             d
@@ -37435,7 +37430,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
               onSelectModeToggle: N,
               promotedActions: a,
               paginatedSelectAllAction: le(),
-              paginatedSelectAllText: J(),
+              paginatedSelectAllText: ee(),
               actions: c,
               disabled: v,
               smallScreen: P,
@@ -37501,7 +37496,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
           children: M(ZH, {
             boundingElement: Y.current,
             children: (be) => {
-              const Pe = ee(
+              const Pe = J(
                 Ue.HeaderWrapper,
                 u && u.length > 0 && !h && Ue["HeaderWrapper-hasSort"],
                 h && Ue["HeaderWrapper-hasAlternateTool"],
@@ -37554,12 +37549,12 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
             ],
           })
         : null,
-      u2 = ee(Ue.ItemWrapper, v && Ue["ItemWrapper-isLoading"]),
+      u2 = J(Ue.ItemWrapper, v && Ue["ItemWrapper-isLoading"]),
       F2 =
         v && !pe
           ? M("div", { className: u2, tabIndex: -1, children: nr })
           : null,
-      I0 = ee(
+      I0 = J(
         Ue.ResourceList,
         v && Ue.disabledPointerEvents,
         S && Ue.disableTextSelection
@@ -37633,7 +37628,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
     TabMeasurer: "Polaris-Tabs__TabMeasurer",
   };
   function lp({ hidden: e, id: t, tabID: n, children: r }) {
-    const i = ee(Ne.Panel, e && Ne["Panel-hidden"]);
+    const i = J(Ne.Panel, e && Ne["Panel-hidden"]);
     return D.createElement(
       "div",
       {
@@ -37674,10 +37669,10 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
         (f.current = l);
     }, [t, e, o, c, l]);
     const y = i && i.bind(null, e),
-      _ = ee(Ne.Tab, l && Ne["Tab-selected"]);
+      _ = J(Ne.Tab, l && Ne["Tab-selected"]);
     let E;
     (l && !n && !o) || (t && !o) ? (E = 0) : (E = -1);
-    const u = ee(Ne.TabContainer, l && Ne.Underline),
+    const u = J(Ne.TabContainer, l && Ne.Underline),
       h = a
         ? M(Jn, {
             id: e,
@@ -37754,7 +37749,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
           `${y}${v.id}Hidden`
         )
       ),
-      m = ee(Ne.Tabs, Ne.TabMeasurer);
+      m = J(Ne.Tabs, Ne.TabMeasurer);
     return ne("div", {
       className: m,
       ref: c,
@@ -37790,7 +37785,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
           accessibilityLabel: l,
           onClick: a = wV,
         } = this.props,
-        c = ee(Ne.Item),
+        c = J(Ne.Item),
         o = {
           id: t,
           ref: this.setFocusedNode,
@@ -37999,10 +37994,10 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
         y = o.sort((C, S) => C - S).map((C) => this.renderTabMarkup(t[C], C)),
         _ = o.length < t.length,
         E = Boolean(a),
-        u = ee(Ne.Tabs, r && Ne.fitted, _ && Ne.fillSpace),
-        h = ee(Ne.DisclosureTab, _ && Ne["DisclosureTab-visible"]),
-        p = ee(Ne.DisclosureActivator, E && Ne.Tab),
-        g = ee(Ne.Title, E && Ne.titleWithIcon),
+        u = J(Ne.Tabs, r && Ne.fitted, _ && Ne.fillSpace),
+        h = J(Ne.DisclosureTab, _ && Ne["DisclosureTab-visible"]),
+        p = J(Ne.DisclosureActivator, E && Ne.Tab),
+        g = J(Ne.Title, E && Ne.titleWithIcon),
         b = E
           ? ne(Dt, { children: [a, M(lt, { source: G8, color: "subdued" })] })
           : M(lt, { source: j7, color: "subdued" }),
@@ -40414,21 +40409,19 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
         s.exports.useEffect(async () => {
           o > f && c(He(Ee({}, a), { next: !0 }));
           let Q = (f - 1) * F,
-            J = (f - 1) * F + F;
-          console.log("DATA : ", v),
-            console.log("page :", Q, J),
-            E(v == null ? void 0 : v.slice(Q, J));
+            ee = (f - 1) * F + F;
+          E(v == null ? void 0 : v.slice(Q, ee));
         }, [f, v]),
         s.exports.useEffect(async () => {
-          const Q = r.filter((J) => {
+          const Q = r.filter((ee) => {
             var le, K;
             return (
-              ((le = J.Name) == null
+              ((le = ee.Name) == null
                 ? void 0
                 : le
                     .toLowerCase()
                     .includes(w == null ? void 0 : w.toLowerCase())) ||
-              ((K = J.fullCountry) == null
+              ((K = ee.fullCountry) == null
                 ? void 0
                 : K.toLowerCase().includes(
                     w == null ? void 0 : w.toLowerCase()
@@ -40448,16 +40441,16 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
         I = (Q) => {
           if (o != 0)
             if (Q === 0) {
-              const J = f - 1;
-              J === 0 && c(He(Ee({}, a), { prev: !1 })),
-                J === 1
+              const ee = f - 1;
+              ee === 0 && c(He(Ee({}, a), { prev: !1 })),
+                ee === 1
                   ? (c(He(Ee({}, a), { prev: !1 })), m(1))
-                  : (c(He(Ee({}, a), { prev: !0 })), m(J));
+                  : (c(He(Ee({}, a), { prev: !0 })), m(ee));
             } else {
-              const J = f + 1;
-              J === o
+              const ee = f + 1;
+              ee === o
                 ? (c({ next: !1, prev: !0 }), m(o))
-                : (c({ prev: !0, next: !0 }), m(J));
+                : (c({ prev: !0, next: !0 }), m(ee));
             }
         },
         G = (Q) => {
@@ -40597,7 +40590,7 @@ For more information, please visit: https://go.apollo.dev/c/docs`)
           ],
         }),
       });
-      function ie(Q, J, le) {
+      function ie(Q, ee, le) {
         const {
             id: K,
             Name: se,
@@ -44828,7 +44821,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           11);
       return H === 10 ? parseInt(O[7], 10) === 0 : H === parseInt(O[7], 10);
     }
-    function J(O) {
+    function ee(O) {
       var H = O.slice(0);
       O.length > 11 && (H = H.slice(2));
       var Z = "",
@@ -44918,7 +44911,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       "ro-RO": re,
       "sk-SK": ie,
       "sl-SI": Q,
-      "sv-SE": J,
+      "sv-SE": ee,
     };
     (K["lb-LU"] = K["fr-LU"]),
       (K["lt-LT"] = K["et-EE"]),
@@ -46537,7 +46530,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       re = ue(Y4.exports),
       ie = ue(Q4.exports),
       Q = lr(Gl),
-      J = ue(X4.exports),
+      ee = ue(X4.exports),
       le = ue(J4.exports),
       K = ue(e9.exports),
       se = ue(t9.exports),
@@ -46636,7 +46629,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         isFQDN: E.default,
         isBoolean: h.default,
         isIBAN: Q.default,
-        isBIC: J.default,
+        isBIC: ee.default,
         isAlpha: g.default,
         isAlphaLocales: g.locales,
         isAlphanumeric: b.default,
@@ -59141,7 +59134,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         re = j[0],
         ie = j[1],
         Q = Ci(s.exports.useState([]), 2),
-        J = Q[0],
+        ee = Q[0],
         le = Q[1],
         K = Ci(s.exports.useState(""), 2),
         se = K[0],
@@ -59150,7 +59143,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         O = s.exports.useRef(null),
         H = s.exports.useRef(null),
         Z = re.includes(l) ? l : "",
-        te = se ? J : re,
+        te = se ? ee : re,
         ae = function (_e) {
           return oY[_e];
         },
@@ -71783,17 +71776,17 @@ body{height: min-content; overflow: hidden;}
             const re = (V ? I : j).childNodes;
             let ie = I.cloneNode(!1),
               Q = null,
-              J = null;
+              ee = null;
             for (; re[0]; )
-              (J = re[0]),
-                o._notTextNode(J) && !o.isBreak(J) && !o.isListCell(ie)
+              (ee = re[0]),
+                o._notTextNode(ee) && !o.isBreak(ee) && !o.isListCell(ie)
                   ? (ie.childNodes.length > 0 &&
                       (Q || (Q = ie),
                       k.insertBefore(ie, G),
                       (ie = I.cloneNode(!1))),
-                    k.insertBefore(J, G),
-                    Q || (Q = J))
-                  : ie.appendChild(J);
+                    k.insertBefore(ee, G),
+                    Q || (Q = ee))
+                  : ie.appendChild(ee);
             if (ie.childNodes.length > 0) {
               if (o.isListCell(k) && o.isListCell(ie) && o.isList(G))
                 if (P) {
@@ -71856,9 +71849,9 @@ body{height: min-content; overflow: hidden;}
                         : i.defaultTag
                     );
                     const Q = o.isListCell(G),
-                      J = ie.childNodes;
-                    for (; J[0] && !(o.isList(J[0]) && !Q); )
-                      G.appendChild(J[0]);
+                      ee = ie.childNodes;
+                    for (; ee[0] && !(o.isList(ee[0]) && !Q); )
+                      G.appendChild(ee[0]);
                     o.copyFormatAttributes(G, ie), (V = !0);
                   }
                 else G = G.cloneNode(!1);
@@ -71972,10 +71965,10 @@ body{height: min-content; overflow: hidden;}
             (w && b.collapsed && o.isFormatElement(C.parentNode)) ||
             (C === A && C.nodeType === 1 && o.isNonEditable(C))
           ) {
-            const J = C.parentNode;
+            const ee = C.parentNode;
             if (
-              !o.isListCell(J) ||
-              !o.getValues(J.style).some(
+              !o.isListCell(ee) ||
+              !o.getValues(ee.style).some(
                 function (le) {
                   return this._listKebab.indexOf(le) > -1;
                 }.bind(this)
@@ -71990,14 +71983,14 @@ body{height: min-content; overflow: hidden;}
             !o.isBreak(C) &&
             !o.isComponent(C)
           ) {
-            let J = null;
+            let ee = null;
             const le = C.childNodes[S];
             le &&
               (le.nextSibling
-                ? (J = o.isBreak(le) ? le : le.nextSibling)
-                : (J = null));
+                ? (ee = o.isBreak(le) ? le : le.nextSibling)
+                : (ee = null));
             const K = o.createTextNode(o.zeroWidthSpace);
-            C.insertBefore(K, J),
+            C.insertBefore(K, ee),
               this.setRange(K, 1, K, 1),
               (b = this.getRange()),
               (C = b.startContainer),
@@ -72014,7 +72007,7 @@ body{height: min-content; overflow: hidden;}
           const z = c.RegExp,
             T = u.nodeName;
           if (!w && C === A && !p && u) {
-            let J = C,
+            let ee = C,
               le = 0;
             const K = [],
               se = u.style;
@@ -72022,9 +72015,9 @@ body{height: min-content; overflow: hidden;}
             const fe = u.classList;
             for (let pe = 0, O = fe.length; pe < O; pe++) K.push("." + fe[pe]);
             if (K.length > 0) {
-              for (; !o.isFormatElement(J) && !o.isWysiwygDiv(J); ) {
+              for (; !o.isFormatElement(ee) && !o.isWysiwygDiv(ee); ) {
                 for (let pe = 0; pe < K.length; pe++)
-                  if (J.nodeType === 1) {
+                  if (ee.nodeType === 1) {
                     const O = K[pe],
                       H = /^\./.test(O)
                         ? new z(
@@ -72033,19 +72026,19 @@ body{height: min-content; overflow: hidden;}
                           )
                         : !1,
                       Z = x
-                        ? !!J.style[O]
-                        : !!J.style[O] &&
+                        ? !!ee.style[O]
+                        : !!ee.style[O] &&
                           !!u.style[O] &&
-                          J.style[O] === u.style[O],
+                          ee.style[O] === u.style[O],
                       te =
                         H === !1
                           ? !1
                           : x
-                          ? !!J.className.match(H)
-                          : !!J.className.match(H) && !!u.className.match(H);
+                          ? !!ee.className.match(H)
+                          : !!ee.className.match(H) && !!u.className.match(H);
                     (Z || te) && le++;
                   }
-                J = J.parentNode;
+                ee = ee.parentNode;
               }
               if (le >= K.length) return;
             }
@@ -72057,8 +72050,8 @@ body{height: min-content; overflow: hidden;}
             V = "",
             $ = "";
           if (h) {
-            for (let J = 0, le = h.length, K; J < le; J++)
-              (K = h[J]),
+            for (let ee = 0, le = h.length, K; ee < le; ee++)
+              (K = h[ee]),
                 /^\./.test(K)
                   ? (V += (V ? "|" : "\\s*(?:") + K.replace(/^\./, ""))
                   : (R += (R ? "|" : "(?:;|^|\\s)(?:") + K);
@@ -72067,13 +72060,13 @@ body{height: min-content; overflow: hidden;}
           }
           if (p) {
             $ = "^(?:" + p[0];
-            for (let J = 1; J < p.length; J++) $ += "|" + p[J];
+            for (let ee = 1; ee < p.length; ee++) $ += "|" + p[ee];
             ($ += ")$"), ($ = new z($, "i"));
           }
           const q = c.Boolean,
             Y = { v: !1 },
-            N = function (J) {
-              const le = J.cloneNode(!1);
+            N = function (ee) {
+              const le = ee.cloneNode(!1);
               if (le.nodeType === 3 || o.isBreak(le)) return le;
               if (w) return null;
               const K = (!$ && x) || ($ && $.test(le.nodeName));
@@ -72117,8 +72110,8 @@ body{height: min-content; overflow: hidden;}
             o.getFormatElement(C, null) ||
               ((C = o.getChildElement(
                 k[0],
-                function (J) {
-                  return J.nodeType === 3;
+                function (ee) {
+                  return ee.nodeType === 3;
                 },
                 !1
               )),
@@ -72126,8 +72119,8 @@ body{height: min-content; overflow: hidden;}
             o.getFormatElement(A, null) ||
               ((A = o.getChildElement(
                 k[k.length - 1],
-                function (J) {
-                  return J.nodeType === 3;
+                function (ee) {
+                  return ee.nodeType === 3;
                 },
                 !1
               )),
@@ -72138,9 +72131,9 @@ body{height: min-content; overflow: hidden;}
           const j =
               w ||
               (x &&
-                (function (J) {
-                  for (let le = 0, K = J.length; le < K; le++)
-                    if (o._isMaintainedNode(J[le]) || o._isSizeNode(J[le]))
+                (function (ee) {
+                  for (let le = 0, K = ee.length; le < K; le++)
+                    if (o._isMaintainedNode(ee[le]) || o._isSizeNode(ee[le]))
                       return !0;
                   return !1;
                 })(p)),
@@ -72150,7 +72143,7 @@ body{height: min-content; overflow: hidden;}
           if (I) {
             this._resetCommonListCell(k[0], h) &&
               (b = this.setRange(C, S, A, F));
-            const J = this._nodeChange_oneLine(
+            const ee = this._nodeChange_oneLine(
               k[0],
               U,
               N,
@@ -72165,19 +72158,19 @@ body{height: min-content; overflow: hidden;}
               ie,
               Q
             );
-            (B.container = J.startContainer),
-              (B.offset = J.startOffset),
-              (P.container = J.endContainer),
-              (P.offset = J.endOffset),
+            (B.container = ee.startContainer),
+              (B.offset = ee.startOffset),
+              (P.container = ee.endContainer),
+              (P.offset = ee.endOffset),
               B.container === P.container &&
                 o.onlyZeroWidthSpace(B.container) &&
                 (B.offset = P.offset = 1),
-              this._setCommonListStyle(J.ancestor, null);
+              this._setCommonListStyle(ee.ancestor, null);
           } else {
-            let J = !1;
-            G > 0 && this._resetCommonListCell(k[G], h) && (J = !0),
-              this._resetCommonListCell(k[0], h) && (J = !0),
-              J && this.setRange(C, S, A, F),
+            let ee = !1;
+            G > 0 && this._resetCommonListCell(k[G], h) && (ee = !0),
+              this._resetCommonListCell(k[0], h) && (ee = !0),
+              ee && this.setRange(C, S, A, F),
               G > 0 &&
                 ((U = u.cloneNode(!1)),
                 (P = this._nodeChange_endLine(
@@ -72404,9 +72397,9 @@ body{height: min-content; overflow: hidden;}
             re,
             ie,
             Q;
-          const J = c.RegExp;
+          const ee = c.RegExp;
           function le(te) {
-            const ae = new J(
+            const ae = new ee(
               "(?:;|^|\\s)(?:" + ie + "null)\\s*:[^;]*\\s*(?:;|$)",
               "ig"
             );
@@ -72751,7 +72744,7 @@ body{height: min-content; overflow: hidden;}
           if (
             ((function k(I, G) {
               const j = I.childNodes;
-              for (let re = 0, ie = j.length, Q, J; re < ie; re++) {
+              for (let re = 0, ie = j.length, Q, ee; re < ie; re++) {
                 const le = j[re];
                 if (!le) continue;
                 let K = G;
@@ -72760,14 +72753,14 @@ body{height: min-content; overflow: hidden;}
                     if (o._isIgnoreNodeChange(le)) {
                       if (
                         ((h = h.cloneNode(!1)),
-                        (J = le.cloneNode(!0)),
-                        P.appendChild(J),
+                        (ee = le.cloneNode(!0)),
+                        P.appendChild(ee),
                         P.appendChild(h),
                         B.push(h),
                         F && le.contains(F))
                       ) {
                         const O = o.getNodePath(F, le);
-                        F = o.getNodeFromPath(O, J);
+                        F = o.getNodeFromPath(O, ee);
                       }
                     } else k(le, le);
                     continue;
@@ -73051,14 +73044,14 @@ body{height: min-content; overflow: hidden;}
                     continue;
                   }
                   ($ = ie), (V = []);
-                  const J = [];
+                  const ee = [];
                   for (; $.parentNode !== null && $ !== z && $ !== h; )
                     (re = p($)),
                       re &&
                         $.nodeType === 1 &&
-                        (A($) ? Y || J.push(re) : V.push(re)),
+                        (A($) ? Y || ee.push(re) : V.push(re)),
                       ($ = $.parentNode);
-                  V = V.concat(J);
+                  V = V.concat(ee);
                   const le = V.length > 0,
                     K = V.pop() || ie;
                   for (q = $ = K; V.length > 0; )
@@ -73100,7 +73093,7 @@ body{height: min-content; overflow: hidden;}
                 }
                 if (!R && ie === P) {
                   Y = S(ie);
-                  const J = o.createTextNode(
+                  const ee = o.createTextNode(
                       P.nodeType === 1 ? "" : P.substringData(U, P.length - U)
                     ),
                     le = o.createTextNode(
@@ -73129,7 +73122,8 @@ body{height: min-content; overflow: hidden;}
                       !Y &&
                       ((h = h.cloneNode(!1)), B.appendChild(h), T.push(h));
                   for (
-                    o.onlyZeroWidthSpace(J) || I.insertBefore(J, I.firstChild),
+                    o.onlyZeroWidthSpace(ee) ||
+                      I.insertBefore(ee, I.firstChild),
                       $ = I,
                       V = [];
                     $ !== B && $ !== null;
@@ -75664,20 +75658,20 @@ body{height: min-content; overflow: hidden;}
                       !1
                     );
                     let Q = I.focusNode;
-                    const J = I.focusOffset;
-                    Y === Q && (Q = Q.childNodes[J - j > 1 ? J - 1 : J]),
+                    const ee = I.focusOffset;
+                    Y === Q && (Q = Q.childNodes[ee - j > 1 ? ee - 1 : ee]),
                       f.setRange(Q, 1, Q, 1);
                   } else {
                     const Q = I.focusNode.nextSibling,
-                      J = o.createElement("BR");
-                    f.insertNode(J, null, !1);
-                    const le = J.previousSibling,
-                      K = J.nextSibling;
+                      ee = o.createElement("BR");
+                    f.insertNode(ee, null, !1);
+                    const le = ee.previousSibling,
+                      K = ee.nextSibling;
                     !o.isBreak(Q) &&
                     !o.isBreak(le) &&
                     (!K || o.onlyZeroWidthSpace(K))
-                      ? (J.parentNode.insertBefore(J.cloneNode(!1), J),
-                        f.setRange(J, 1, J, 1))
+                      ? (ee.parentNode.insertBefore(ee.cloneNode(!1), ee),
+                        f.setRange(ee, 1, ee, 1))
                       : f.setRange(K, 0, K, 0);
                   }
                   m._onShortcutKey = !0;
@@ -77112,7 +77106,7 @@ body{height: min-content; overflow: hidden;}
               "onVideoUploadBefore",
               "onAudioUploadBefore",
             ],
-            J = [
+            ee = [
               "onImageUpload",
               "onImageUpload",
               "onAudioUpload",
@@ -77151,7 +77145,7 @@ body{height: min-content; overflow: hidden;}
                   return se(fe, pe, H);
                 });
             }),
-            J.forEach(function (K) {
+            ee.forEach(function (K) {
               var se = e[K];
               I.current &&
                 K &&
@@ -77277,7 +77271,7 @@ body{height: min-content; overflow: hidden;}
         ),
         (0, N1.useEffect)(
           function () {
-            var j, re, ie, Q, J, le, K, se, fe, pe;
+            var j, re, ie, Q, ee, le, K, se, fe, pe;
             G.current ||
               (F === !0
                 ? (j = I.current) === null || j === void 0 || j.toolbar.hide()
@@ -77292,7 +77286,7 @@ body{height: min-content; overflow: hidden;}
                   Q === void 0 ||
                   Q.toolbar.enable(),
               b === !0
-                ? (J = I.current) === null || J === void 0 || J.disable()
+                ? (ee = I.current) === null || ee === void 0 || ee.disable()
                 : (le = I.current) === null || le === void 0 || le.enable(),
               w === !0
                 ? (K = I.current) === null || K === void 0 || K.readOnly(!0)
@@ -77419,6 +77413,7 @@ body{height: min-content; overflow: hidden;}
         i = [
           { label: "Header", value: "0" },
           { label: "Footer", value: "1" },
+          { label: "Products page", value: "2" },
         ],
         [l, a] = s.exports.useState(
           t.state
@@ -77429,7 +77424,7 @@ body{height: min-content; overflow: hidden;}
                     : U.BackgroundColor
                 )
               )
-            : { hue: 1, brightness: 1, saturation: 0 }
+            : { hue: 0, brightness: 1, saturation: 0 }
         ),
         [c, o] = s.exports.useState(!1),
         [d, f] = s.exports.useState(!1),
@@ -77440,6 +77435,8 @@ body{height: min-content; overflow: hidden;}
               ? "0"
               : t.state.Display === "Footer"
               ? "1"
+              : t.state.Display === "Products page"
+              ? "2"
               : ""
             : ""
         ),
@@ -77493,6 +77490,8 @@ body{height: min-content; overflow: hidden;}
                       ? "0"
                       : t.state.Display === "Footer"
                       ? "1"
+                      : t.state.Display === "Products page"
+                      ? "2"
                       : ""
                     : "",
                   old_country_code: t.state ? t.state.Country : "",
@@ -77505,12 +77504,9 @@ body{height: min-content; overflow: hidden;}
                 F(V[1]),
                 T(V[2]),
                 w(V[3]),
-                V[0] || V[1] || V[2] || V[3])
-              )
-                console.log("error");
-              else {
-                console.log("call api"),
-                  (R.country_code = g ? "Default" : E),
+                !(V[0] || V[1] || V[2] || V[3]))
+              ) {
+                (R.country_code = g ? "Default" : E),
                   (R.option = parseInt(y)),
                   await PU(n, R);
                 const $ = t.state ? 1 : 0;
@@ -77631,7 +77627,10 @@ body{height: min-content; overflow: hidden;}
                     },
                   }),
                 }),
-                M("div", { id: "panthil", style: { backgroundColor: wa(l) } }),
+                M("div", {
+                  id: "display_content",
+                  style: { backgroundColor: wa(l) },
+                }),
                 M(kr, {
                   message: x ? "Content is required" : "",
                   fieldID: "myFieldID",

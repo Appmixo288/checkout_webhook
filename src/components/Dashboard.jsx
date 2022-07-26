@@ -102,8 +102,8 @@ const Dashboard = (props) => {
     }
     let startIndex = (page - 1) * pagePerData;
     let endIndex = (page - 1) * pagePerData + pagePerData;
-    console.log("DATA : ", item);
-    console.log("page :", startIndex, endIndex);
+    // console.log("DATA : ", item);
+    // console.log("page :", startIndex, endIndex);
     setcurrentpageDate(item?.slice(startIndex, endIndex));
   }, [page, item]);
 
@@ -166,7 +166,6 @@ const Dashboard = (props) => {
   };
   const handleRirectAndShowContent = (country) => {
     window.open("https://" + window.shop + "?c_code=" + country, "_blank");
-    // redirectPoint.document.write("<div>Panthil</div>");
   };
   const deleteModel = () => {
     return (

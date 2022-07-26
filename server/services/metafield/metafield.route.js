@@ -77,7 +77,6 @@ router.get("/get-all-shop-metafields", verifyRequest(app), async (req, res) => {
     const session = await Shopify.Utils.loadCurrentSession(req, res, false);
     const result = await Get_Metafield(session, "");
     // console.log("result: " + JSON.stringify(result));
-    // console.log("panthil");
     result.map((e) => {
       const M_Data = JSON.parse(e.value);
       Object.keys(M_Data).map((key) => {
@@ -90,7 +89,11 @@ router.get("/get-all-shop-metafields", verifyRequest(app), async (req, res) => {
               Country: key,
               fullCountry: key === "Default" ? "Default" : Countries[key],
               metafield_key: e.key,
-              Display: index ? (index === 1 ? "Footer" : "Products") : "Header",
+              Display: index
+                ? index === 1
+                  ? "Footer"
+                  : "Products page"
+                : "Header",
               Content: data[1],
               BackgroundColor: data[2],
               timestamp: data[3],
@@ -122,11 +125,9 @@ router.post(
       console.log("del-country-content-metafield calling .......");
 
       const session = await Shopify.Utils.loadCurrentSession(req, res, false);
-      console.log(0);
       const info = req.body.value;
-      console.log(0);
+      console.log("delete : ", info);
       const delete_res = await Delete_country_content_metafield(session, info);
-      console.log(0);
       console.log("del-country-content-metafield successfully .......");
 
       return res.status(200).send(delete_res);
@@ -219,21 +220,21 @@ router.post("/add-country-metafield", verifyRequest(app), async (req, res) => {
             const del_country_content = JSON.parse(C_call_data[0].value);
             del_country_content[info.old_country_code][info.old_option] = null;
             const del_country = del_country_content[info.old_country_code];
-            console.log("DEL_COUNTRY : ", del_country);
+            // console.log("DEL_COUNTRY : ", del_country);
             if (
               del_country[0] === null &&
               del_country[1] === null &&
               del_country[2] === null
             ) {
-              delete del_country_content[info.Country];
+              delete del_country_content[info.old_country_code];
             }
-            console.log("final country", country_content);
+            // console.log("final country", country_content);
             const saved_country = await Add_Content_Metafield(
               session,
               old_country_content.key,
               JSON.stringify(del_country_content)
             );
-            console.log("fuisdvniu");
+            // console.log("fuisdvniu");
             const dd = await Already_Create_Content_Metafield(
               session,
               country_content,
@@ -455,7 +456,6 @@ router.post("/all_delete_metafields", verifyRequest(app), async (req, res) => {
 
     const session = await Shopify.Utils.loadCurrentSession(req, res, false);
 
-    // console.log("method panthil:", ddd);
     const fff = await all_delete_metafields(session);
     console.log("all_delete_metafields successfully .......");
 
