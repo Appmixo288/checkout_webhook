@@ -182,9 +182,9 @@ export async function createServer(
 
 if (!isTest) {
   // connectDB();
-  connectDB().then(() => {
-    createServer().then(({ app }) =>
-      app.listen(PORT, () => console.log(`Server listening on PORT: ${PORT}`))
-    );
-  });
+  // connectDB().then(() => {
+  createServer().then(({ app }) =>
+    app.listen(PORT, () => console.log(`Server listening on PORT: ${PORT}`))
+  );
+  // });
 }

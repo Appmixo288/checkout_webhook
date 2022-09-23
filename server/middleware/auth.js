@@ -74,10 +74,10 @@ export default function applyAuthMiddleware(app) {
         session.accessToken
       );
 
-      //GetShop data
-      const {
-        data: { shop },
-      } = await ShopifyShopServices.getShopData(restClient);
+      // //GetShop data
+      // const {
+      //   data: { shop },
+      // } = await ShopifyShopServices.getShopData(restClient);
 
       app.set(
         "active-shopify-shops",
