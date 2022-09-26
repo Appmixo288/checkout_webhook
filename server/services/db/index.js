@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 export const connectDB = () => {
-  const url = process.env.MONGO_SRV;
+  const url = process.env.mongo_srv;
   return new Promise((resolve, reject) => {
     mongoose
       .connect(url, {
