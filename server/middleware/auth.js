@@ -10,7 +10,6 @@ import {
 import { verifyWebhook } from "../middleware/verify-request.js";
 import { DBShopServices } from "../services/db/index.js";
 import { APP_STATUS } from "../constants/index.js";
-import { all_delete_metafields } from "../services/metafield/metafield.route.js";
 export default function applyAuthMiddleware(app) {
   app.get("/auth", async (req, res) => {
     if (!req.signedCookies[app.get("top-level-oauth-cookie")]) {
@@ -75,9 +74,9 @@ export default function applyAuthMiddleware(app) {
       );
 
       // //GetShop data
-      // const {
-      //   data: { shop },
-      // } = await ShopifyShopServices.getShopData(restClient);
+      const {
+        data: { shop },
+      } = await ShopifyShopServices.getShopData(restClient);
 
       app.set(
         "active-shopify-shops",

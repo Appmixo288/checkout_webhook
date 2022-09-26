@@ -15,7 +15,6 @@ import translations from "@shopify/polaris/locales/en.json";
 import "@shopify/polaris/build/esm/styles.css";
 
 import HomePage from "./components/HomePage";
-import Router from "./Router";
 export default function App() {
   window.shop = new URL(location).searchParams.get("shop");
   return (
@@ -28,7 +27,7 @@ export default function App() {
         }}
       >
         <MyProvider>
-          <Router />
+          <HomePage />
         </MyProvider>
       </AppBridgeProvider>
     </PolarisProvider>

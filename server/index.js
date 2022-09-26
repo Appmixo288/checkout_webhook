@@ -7,7 +7,6 @@ import "dotenv/config";
 import { connectDB } from "./services/db/index.js";
 import applyAuthMiddleware from "./middleware/auth.js";
 import verifyRequest from "./middleware/verify-request.js";
-import MetafieldRouter from "./services/metafield/metafield.route.js";
 import bodyParser from "body-parser";
 import { addWebhookHandlers } from "./webhooks/index.js";
 import { verifyWebhook } from "./middleware/verify-request.js";
@@ -135,7 +134,7 @@ export async function createServer(
       next();
     }
   });
-  app.use("/", MetafieldRouter);
+
   /**
    * @type {import('vite').ViteDevServer}
    */
@@ -182,9 +181,9 @@ export async function createServer(
 
 if (!isTest) {
   // connectDB();
-  // connectDB().then(() => {
-  createServer().then(({ app }) =>
-    app.listen(PORT, () => console.log(`Server listening on PORT: ${PORT}`))
-  );
-  // });
+  connectDB().then(() => {
+    createServer().then(({ app }) =>
+      app.listen(PORT, () => console.log(`Server listening on PORT: ${PORT}`))
+    );
+  });
 }
