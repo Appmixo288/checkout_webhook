@@ -7,7 +7,7 @@ import {
 class CustomSessionStorage {
   storeCallback = async (session) => {
     try {
-      return !!(await createOrUpdateSession(session));
+      return Promise.resolve(!!(await createOrUpdateSession(session)));
     } catch (err) {
       throw new Error(err);
     }
@@ -18,9 +18,9 @@ class CustomSessionStorage {
       const data = await getSession(id);
 
       if (data) {
-        return JSON.parse(data.sessionData);
+        return Promise.resolve(JSON.parse(data.sessionData));
       } else {
-        return undefined;
+        return Promise.resolve(undefined);
       }
     } catch (err) {
       throw new Error(err);
@@ -30,7 +30,7 @@ class CustomSessionStorage {
   deleteCallback = async (id) => {
     try {
       console.log("33333333333333333333333333333333333333");
-      return !!(await removeSession(id));
+      return Promise.resolve(!!(await removeSession(id)));
     } catch (err) {
       throw new Error(err);
     }
