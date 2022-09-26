@@ -11,6 +11,7 @@ export const appCheckoutUpdateWebhookHandler = async (topic, shop, body) => {
     "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
   );
   const token = dd.token;
+  console.log("token : ", token);
   var config = {
     method: "get",
     url: `https://${shop}/admin/api/2022-10/checkouts/${token}.json`,
