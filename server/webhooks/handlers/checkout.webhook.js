@@ -13,7 +13,7 @@ export const appCheckoutUpdateWebhookHandler = async (topic, shop, body) => {
   const token = dd.token;
   var config = {
     method: "get",
-    url: `https://purchase-app-store.myshopify.com//admin/api/2022-10/checkouts/${token}.json`,
+    url: `https://${shop}/admin/api/2022-10/checkouts/${token}.json`,
     headers: {
       "X-Shopify-Access-Token": `${shop_data.access_token}`,
     },
